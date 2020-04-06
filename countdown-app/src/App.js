@@ -3,8 +3,6 @@ import plus from './plus.png';
 import './App.css';
 import Timer from './Timer.js';
 
-//check github dependency warnings
-
 function App() {
   const [timer, showTimer] = useState(false);
   if (timer) {
