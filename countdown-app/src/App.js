@@ -1,24 +1,57 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import plus from './plus.png';
 import './App.css';
+import Timer from './Timer.js';
+
+//check github dependency warnings
 
 function App() {
+  const [timer, showTimer] = useState(false);
+  if (timer) {
+    return <Timer />;
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+      <div title="+" className="button">
+        <div onClick={() => showTimer(true)}>
+          <img src={plus} alt="add-new" height="100px"/>
+        </div>
+      </div>
+      <div className="count">
+        <p className="down">
+          DOWN
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </div>
+      <div className="count">
+        <p className="down" style={{ marginLeft: '50px' }}>
+          COUNT
+        </p>
+      </div>
+      <div className="count" style={{ marginLeft: '100px' }}>
+        <p className="down">
+          DOWN
+        </p>
+      </div>
+      <div className="count" style={{ marginLeft: '150px' }}>
+        <p className="down">
+          COUNT
+        </p>
+      </div>
+      <div className="count" style={{ marginLeft: '200px' }}>
+        <p className="down">
+          DOWN
+        </p>
+      </div>
+      <div className="count" style={{ marginLeft: '250px' }}>
+        <p className="down">
+          COUNT
+        </p>
+      </div>
+      <div className="count" style={{ marginLeft: '300px' }}>
+        <p className="down">
+          DOWN
+        </p>
+      </div>
     </div>
   );
 }
